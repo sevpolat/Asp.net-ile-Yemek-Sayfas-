@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Kayıt Ol";
+}
+<div class="content-box">
+    <h2>Kayıt Ol</h2>
+    @if (ViewBag.Mesaj != null)
+    {
+        <div class="success-message">@ViewBag.Mesaj</div>
+    }
+    <div class="form-box">
+        <form method="post" action="">
+            <label for="fullname">Ad Soyad:</label>
+            <input type="text" id="fullname" name="fullname" required />
+            <label for="username">Kullanıcı Adı:</label>
+            <input type="text" id="username" name="username" required />
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" name="email" required />
+            <label for="password">Şifre:</label>
+            <input type="password" id="password" name="password" required />
+            <button type="submit">Kayıt Ol</button>
+        </form>
+    </div>
+</div>

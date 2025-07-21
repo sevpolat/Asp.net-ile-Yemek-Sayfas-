@@ -1,0 +1,29 @@
+﻿@model List<bil216proje.Models.Kullanici>
+@{
+    ViewBag.Title = "Kayıtlı Kullanıcılar";
+}
+<div class="content-box">
+    <h2>Kayıtlı Kullanıcılar</h2>
+    @if (Model != null && Model.Count > 0)
+    {
+        <table>
+            <tr>
+                <th>Ad Soyad</th>
+                <th>Kullanıcı Adı</th>
+                <th>E-posta</th>
+            </tr>
+            @foreach (var kullanici in Model)
+            {
+                <tr>
+                    <td>@kullanici.FullName</td>
+                    <td>@kullanici.UserName</td>
+                    <td>@kullanici.Email</td>
+                </tr>
+            }
+        </table>
+    }
+    else
+    {
+        <p>Henüz kayıtlı kullanıcı yok.</p>
+    }
+</div>
